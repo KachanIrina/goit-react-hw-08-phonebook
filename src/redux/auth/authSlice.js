@@ -10,26 +10,28 @@ const authSlice = createSlice({
     isRefreshing: false,
   },
   extraReducers: builder => {
-    builder.addCase(register.pending, (state, action) => state);
-    builder.addCase(register.fulfilled, (state, action) => {
-      state.token = action.payload.token;
-      state.user.name = action.payload.user.name;
-      state.isLoggedIn = true;
-    });
-    builder.addCase(register.rejected, (state, action) => state);
-    builder.addCase(logIn.fulfilled, (state, action) => {
-      state.token = action.payload.token;
-      state.user.name = action.payload.user.name;
-      state.isLoggedIn = true;
-    });
-    builder.addCase(logOut.fulfilled, (state, action) => {
-      state.token = '';
-      state.isLoggedIn = false;
-    });
-    builder.addCase(refreshUser.fulfilled, (state, action) => {
-      state.user = action.payload;
-      state.isLoggedIn = true;
-    });
+    builder
+      .addCase(register.pending, (state, action) => state)
+      .addCase(register.fulfilled, (state, action) => {
+        state.token = action.payload.token;
+        state.user.name = action.payload.user.name;
+        state.isLoggedIn = true;
+      })
+      .addCase(register.rejected, (state, action) => state)
+      .addCase(logIn.fulfilled, (state, action) => {
+        state.token = action.payload.token;
+        state.user.name = action.payload.user.name;
+        state.isLoggedIn = true;
+      })
+      .addCase(logOut.fulfilled, (state, action) => {
+        state.user = { name: null, email: null };
+        state.token = null;
+        state.isLoggedIn = false;
+      })
+      .addCase(refreshUser.fulfilled, (state, action) => {
+        state.user = action.payload;
+        state.isLoggedIn = true;
+      });
   },
 });
 
