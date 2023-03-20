@@ -1,0 +1,42 @@
+.form {
+  display: flex;
+  justify-content: flex-start;
+  min-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+  align-items: center;
+  font-size: large;
+  text-align: left;
+  padding: 5px 15px;
+}
+
+.formBtn {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgb(2, 2, 2);
+  flex-grow: 1;
+  font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  height: 36px;
+  line-height: 20px;
+  margin-left: 8px;
+  margin-right: 6px;
+  min-width: 185px;
+  padding: 0 16px 0 16px;
+  cursor: pointer;
+  border: 1px solid #181818;
+  border-radius: 4px;
+}
+
+.formBtn:active {
+  background-color: rgb(34, 77, 163);
+  cursor: pointer;
+}
