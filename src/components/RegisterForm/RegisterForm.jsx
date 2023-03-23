@@ -36,7 +36,6 @@ export const RegisterForm = () => {
 
   const handleChangeInput = e => {
     setState({ type: e.target.name, payload: e.target.value });
-    console.log(state);
   };
 
   const handleSubmit = e => {
