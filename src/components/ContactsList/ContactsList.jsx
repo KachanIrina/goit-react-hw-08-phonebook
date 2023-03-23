@@ -19,20 +19,6 @@ export const ContactsList = () => {
           handleDelete={handleDelete}
         />
       ))}
-
-      {/* // <li className={css.contact} key={id}>
-        //   <p>{name}</p>
-        //   <p>{number}</p>
-        //   <button
-        //     className={css.btn}
-        //     type="button"
-        //     onClick={() => {
-        //       dispatch(deleteContact(id));
-        //     }}
-        //   >
-        //     Delete
-        //   </button>
-        // </li> */}
     </ul>
   );
 };

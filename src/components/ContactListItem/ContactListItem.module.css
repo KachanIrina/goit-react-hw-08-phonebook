@@ -1,0 +1,50 @@
+.contact {
+  display: block;
+  font-size: 30px;
+}
+
+.name {
+  margin-right: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: rgb(2, 61, 61);
+  background-color: rgb(145, 177, 166);
+}
+
+.number {
+  margin-right: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 25px;
+  padding: 0 16px 0 16px;
+  height: 30px;
+  max-width: 300px;
+
+  border: 1px solid #181818;
+  border-radius: 4px;
+  background-color: rgba(139, 195, 233, 0.8);
+  color: rgb(2, 2, 2);
+  font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: rgb(34, 77, 163);
+  cursor: pointer;
+}
+
+.editInput {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  align-items: center;
+  font-size: large;
+  text-align: left;
+  padding: 5px 15px;
+}

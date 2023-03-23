@@ -31,7 +31,7 @@ function Contacts() {
 
       <ContactForm />
 
-      <h2> Contacts</h2>
+      <h2 style={{ marginBottom: 10 }}> Contacts</h2>
 
       <ContactFilter />
       {isLoading && !error && <Loader />}

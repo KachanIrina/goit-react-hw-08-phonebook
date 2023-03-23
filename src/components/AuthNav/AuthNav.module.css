@@ -1,0 +1,11 @@
+.authNav {
+  display: flex;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 30px;
+  color: rgb(43, 8, 109);
+}
+
+.register {
+  margin-right: 30px;
+}

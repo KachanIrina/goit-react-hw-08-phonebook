@@ -1,6 +1,7 @@
 import { useReducer } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
+import css from './RegisterForm.module.css';
 
 function reducer(state, action) {
   switch (action.type) {
@@ -44,20 +45,37 @@ export const RegisterForm = () => {
   };
 
   return (
-    <form action="" onSubmit={handleSubmit}>
+    <form action="" onSubmit={handleSubmit} className={css.registerForm}>
       <label htmlFor="">
         Name
-        <input onChange={handleChangeInput} name="name" type="text" />
+        <input
+          onChange={handleChangeInput}
+          name="name"
+          type="text"
+          className={css.registerInput}
+        />
       </label>
       <label htmlFor="">
         Email
-        <input onChange={handleChangeInput} name="email" type="email" />
+        <input
+          onChange={handleChangeInput}
+          name="email"
+          type="email"
+          className={css.registerInput}
+        />
       </label>
       <label htmlFor="">
         Password
-        <input onChange={handleChangeInput} name="password" type="password" />
+        <input
+          onChange={handleChangeInput}
+          name="password"
+          type="password"
+          className={css.registerInput}
+        />
       </label>
-      <button type="submit">register</button>
+      <button type="submit" className={css.registerBtn}>
+        register
+      </button>
     </form>
   );
 };

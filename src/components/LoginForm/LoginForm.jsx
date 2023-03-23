@@ -1,13 +1,14 @@
 import { useReducer } from 'react';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
+import css from './LoginForm.module.css';
 
 function reducer(state, action) {
   switch (action.type) {
-    case 'name':
+    case 'email':
       return {
         ...state,
-        name: action.payload,
+        email: action.payload,
       };
     case 'password':
       return {
@@ -37,16 +38,28 @@ export const LoginForm = () => {
   };
 
   return (
-    <form action="" onSubmit={handleSubmit}>
+    <form action="" onSubmit={handleSubmit} className={css.loginForm}>
       <label htmlFor="">
         email
-        <input onChange={handleChangeInput} name="name" type="email" />
+        <input
+          onChange={handleChangeInput}
+          name="email"
+          type="email"
+          className={css.loginInput}
+        />
       </label>
       <label htmlFor="">
         password
-        <input onChange={handleChangeInput} name="password" type="password" />
+        <input
+          onChange={handleChangeInput}
+          name="password"
+          type="password"
+          className={css.loginInput}
+        />
       </label>
-      <button type="submit">login</button>
+      <button type="submit" className={css.loginBtn}>
+        login
+      </button>
     </form>
   );
 };

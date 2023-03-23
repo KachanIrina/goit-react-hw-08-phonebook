@@ -7,7 +7,13 @@ export const AppBar = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <header>
+    <header
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+      }}
+    >
       <Navigation />
       {isLoggedIn ? <UserMenu /> : <AuthNav />}
     </header>
